@@ -29,7 +29,7 @@ class FormulirForm
                 Textarea::make('alamat')
                     ->required()
                     ->columnSpanFull(),
-                    Select::make('Provinsi')
+                    Select::make('provinsi')
                     ->options([
                         'Kalimantan Selatan' => 'Kalimantan Selatan',
                         'Kalimantan Timur' => 'Kalimantan Timur',
@@ -41,7 +41,7 @@ class FormulirForm
                         'Jawa Timur' => 'Jawa Timur',
                         'Banten' => 'Banten',
                     ]),
-                Select::make('Negara')
+                Select::make('negara')
                     ->options([
                         'Indonesia' => 'Indonesia',
                         'Malaysia' => 'Malaysia',
@@ -55,8 +55,20 @@ class FormulirForm
                 TextInput::make('handphone')
                     ->tel()
                     ->required(),
-                TextInput::make('captcha')
-                    ->nullable(),
+                TextInput::make('Latitude')
+                    ->label('Latitude')
+                    ->numeric()
+                    ->step('any')
+                    ->nullable()
+                    ->helperText('Format: -6.200000')
+                    ->required(),
+                TextInput::make('Longitude')
+                    ->label('Longitude')
+                    ->numeric()
+                    ->step('any')
+                    ->nullable()
+                    ->helperText('Format: 106.816666')
+                    ->required(),
             ]);
     }
 }

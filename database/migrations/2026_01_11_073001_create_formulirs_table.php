@@ -23,7 +23,8 @@ return new class extends Migration
         $table->string('negara');
         $table->string('kode_pos', 10);
         $table->string('handphone', 15);
-        $table->string('captcha')->nullable();
+        $table->decimal('Latitude', 10, 8)->nullable();
+        $table->decimal('Longitude', 11, 8)->nullable();
         $table->timestamps();
         });
     }

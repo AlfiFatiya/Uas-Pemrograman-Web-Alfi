@@ -18,6 +18,7 @@ class Formulir extends Model
         'negara',
         'kode_pos',
         'handphone',
-        'captcha',
+        'Latitude',
+        'Longitude',
     ];
 }

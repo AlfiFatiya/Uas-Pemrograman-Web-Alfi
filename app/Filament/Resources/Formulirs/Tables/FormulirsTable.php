@@ -31,6 +31,12 @@ class FormulirsTable
                     ->searchable(),
                 TextColumn::make('handphone')
                     ->searchable(),
+                TextColumn::make('Latitude')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('Longitude')
+                    ->sortable()
+                    ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
